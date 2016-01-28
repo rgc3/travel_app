@@ -11,7 +11,7 @@
 </ul>
 
 <% @images.each do |photo| %>
-  <%= image_tag photo %>
+  <%= image_tag photo, width: 300 %>
 <% end %>
 
 <%= image_tag "plane.png", alt: "plane", width: 300 %>
