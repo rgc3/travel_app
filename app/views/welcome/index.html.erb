@@ -10,6 +10,12 @@
 <% end %>
 </ul>
 
-<%= image_tag "brazil.jpg", width: 600 %>
-<%= image_tag "thailand.jpg", width: 600 %>
-<%= image_tag "venice.jpg", width: 600 %>
+<% @images.each do |photo| %>
+  <%= image_tag photo %>
+<% end %>
+
+<%= image_tag "plane.png", alt: "plane", width: 300 %>
+<%= image_tag "brazil.jpg", alt: "Copacabana", id: "brazil", class: "country", width: 300 %>
+<%= image_tag "thailand.jpg", alt: "Thailand", id: "thailand", class: "country", width: 300 %>
+<%= image_tag "venice.jpg", alt: "Venice", id: "italy", class: "country", width: 300 %>
+
