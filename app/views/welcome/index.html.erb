@@ -1,3 +1,15 @@
-<h1>Welcome to this Great Travel App</h1>
+<h1>Welcome to this Great Travel Site</h1>
 
-<h2>Here you will find that this does travel app type things.</h2>
+<h2>This is my very awesome travel site.</h2>
+
+<h3><%= @homeland %></h3>
+
+<ul>
+<% @countries.each do |country| %>
+	<li><%= country %></li>
+<% end %>
+</ul>
+
+<%= image_tag "brazil.jpg", width: 600 %>
+<%= image_tag "thailand.jpg", width: 600 %>
+<%= image_tag "venice.jpg", width: 600 %>
