@@ -10,12 +10,33 @@
 <% end %>
 </ul>
 
+<table class="table">
+  <tr>
+    <% @united_states.each do |key,value| %>
+	  <th><%= key.titleize %></th>
+    <% end %>
+  </tr>
+  <tr>
+    <% @united_states.each do |key,value| %>  
+<!--     .kind_of? checks the value of the argument   -->  
+      <% if value.kind_of?(Array) %>
+<!--       .join would show the values of the array with no commas -->
+          <td><%= value.join(", ") %></td>
+<!--           else statement is only for if it's not an array -->
+      <% else %>
+         <td><%= value %></td>
+      <% end %> 
+    <% end %>
+  </tr>
+</table>
+
+
 <% @images.each do |photo| %>
-  <%= image_tag photo, width: 300 %>
+  <%= image_tag photo, class: "img-responsive" %>
 <% end %>
 
-<%= image_tag "plane.png", alt: "plane", width: 300 %>
-<%= image_tag "brazil.jpg", alt: "Copacabana", id: "brazil", class: "country", width: 300 %>
-<%= image_tag "thailand.jpg", alt: "Thailand", id: "thailand", class: "country", width: 300 %>
-<%= image_tag "venice.jpg", alt: "Venice", id: "italy", class: "country", width: 300 %>
+<%= image_tag "plane.png", class: "img-responsive", alt: "plane" %>
+<%= image_tag "brazil.jpg", class: "img-responsive", alt: "Copacabana", id: "brazil", class: "country" %>
+<%= image_tag "thailand.jpg", class: "img-responsive", alt: "Thailand", id: "thailand", class: "country" %>
+<%= image_tag "venice.jpg", class: "img-responsive", alt: "Venice", id: "italy", class: "country" %>
 
