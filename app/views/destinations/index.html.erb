@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Destinations</h1>
+
+<div class = 'row'>
+
+    <% @destinations.each do |destination| %>
+
+    <div class = 'col-md-4'>
+
+      <div class = 'panel panel-default'>
+
+        <div class = 'panel-body'>
+
+          <h2><%= destination.city %></h2>
+          <h3><%= destination.country %></h3>
+          <p><%= destination.description %></p>
+          <%= link_to 'Show', destination, class: 'btn btn-default' %>
+          <%= link_to 'Edit', edit_destination_path(destination), class: 'btn btn-default' %>
+          <%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default' %>
+        </div>
+      </div>
+    </div>
+
+    <% end %>
+
+</div>
+
+
+
+<br>
+
+<%= link_to 'New Destination', new_destination_path %>
