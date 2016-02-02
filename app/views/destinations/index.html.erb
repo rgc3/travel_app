@@ -1,6 +1,17 @@
 <p id="notice"><%= notice %></p>
 
+
+<ul class="nav nav-pills" role = "tablist">
+  <li><%= link_to "all", destinations_path %></li>
+  <% @my_countries.each do |c| %>
+  <li><%= link_to "#{c.country}", controller: "destinations", country: "#{c.country}" %></li>
+  <% end %>
+  </ul>
+
+
 <h1>Listing Destinations</h1>
+
+
 
 <div class = 'row'>
 
