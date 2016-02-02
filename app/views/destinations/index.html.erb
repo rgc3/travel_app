@@ -25,6 +25,8 @@
 
           <h2><%= destination.city %></h2>
           <h3><%= destination.country %></h3>
+          <p>Population: <%= destination.population %></p>
+          <%= image_tag destination.avatar.url(:medium), class: "img-responsive" %>
           <p><%= destination.description %></p>
           <%= link_to 'Show', destination, class: 'btn btn-default' %>
           <%= link_to 'Edit', edit_destination_path(destination), class: 'btn btn-default' %>

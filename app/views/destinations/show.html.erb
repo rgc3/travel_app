@@ -2,6 +2,8 @@
 
 
   <h1><%= @destination.city %>, <%= @destination.country %></h1>
+  <%= image_tag @destination.avatar.url(:medium) %>
+	<h2>Population <%= @destination.population %></h2>
 
   <p><%= @destination.description %></p>
 
