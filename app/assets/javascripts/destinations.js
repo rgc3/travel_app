@@ -13,14 +13,10 @@ $(document).ready(function (){
       scrollwheel: false,
       };
 
-      var image = 'http://www.hqraleigh.com/public/hq-raleigh-theme/images/hq-logo-black.png';
-      var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+      var map = new google.maps.Map(document.getElementById('destination-map'), mapOptions);
       var marker = new google.maps.Marker({
       position: myLatLng,
       map: map,
-      icon: image,
-      animation: google.maps.Animation.DROP,
-      opacity: 0.5,
       });
 
       var contentString = '<h2>' + address + '</h2>' + '<p>' + description + '</p>'
